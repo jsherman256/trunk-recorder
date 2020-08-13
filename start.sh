@@ -1,8 +1,8 @@
 #!/bin/bash
 
-/usr/bin/docker run -d \
-	--name jsherman256-trunk-recorder \
+/usr/bin/docker run -d --rm \
+	--name tr \
 	-e TZ=America/Los_Angeles \
-	-v /home/pi/jsherman256-trunk-recorder:/app \
+	-v /home/pi/jsherman256-trunk-recorder/app:/app \
 	--device /dev/bus/usb \
-	jsherman256-trunk-recorder
+	jsherman256/trunk-recorder
